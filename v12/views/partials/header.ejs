@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>YelpCamp</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+<body>
+  <nav class="navbar navbar-default bg-dark ">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a  class="navbar-brand White-text" href="/">YelpCamp</a>
+        </div>
+        <div class="">
+          <ul class=" nav navbar-nav navbar-right">
+           <%  if(!currentUser){  %>
+                 <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-warning"><a href="/login">Login</a></button>
+              <button type="button" class="btn btn-success"><a href="/register">SignUp</a></button>
+            </div>
+          <%  }else{ %>
+               <div class="btn-group" role="group" aria-label="Basic example">
+               <button type="button" class="btn btn-outline-info" disabled><a href="#"></a>Signed in as <%= currentUser.username %></button>
+              <button type="button" class="btn btn-outline-info"><a href="/logout">Logout</a></button>
+              </div>
+          <%  } %>
+
+
+          </ul>
+        </div>
+      </div>
+  </nav>
+<div class="container ">
+  <% if(error && error.length>0){ %>
+  <div class="alert alert-danger" role="alert">
+  <%= error %>
+  </div>
+  <% } %>
+  <% if(success && success.length>0){ %>
+  <div class="alert alert-success" role="alert">
+  <%= success %>
+  </div>
+    <% } %>
+</div>

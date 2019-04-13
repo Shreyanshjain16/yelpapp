@@ -1,0 +1,29 @@
+body{
+  background: #0F0   ;
+}
+i.icon{
+	font-size: 3em;
+}
+.thumbnail img{
+  width: 100%;
+}
+.thumbnail{
+  padding: 0;
+}
+.thumbnail .caption-full{
+  padding: 9px;
+}
+.White-text{
+color: White;
+}
+#delete-form {
+  display: inline;
+}
+
+.card {
+
+                width: 450px;
+            margin:  auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
